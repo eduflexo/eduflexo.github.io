@@ -3,44 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduFlexo - School Management System</title>
+    <title>EduFlexo - Enterprise School Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
-            text-align: center;
-            padding: 50px;
+            background-color: #0f172a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-            display: inline-block;
+        header {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1e293b;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        h1 {
-            color: #2c3e50;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #38bdf8;
+            letter-spacing: -0.5px;
         }
-        p {
-            color: #555;
-            font-size: 18px;
+        .badges {
+            display: flex;
+            gap: 10px;
         }
         .badge {
-            background-color: #27ae60;
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #334155;
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            line-height: 1.6;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+            text-align: left;
+        }
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #f1f5f9;
+        }
+        .card p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #0284c7;
             color: white;
             padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            font-weight: bold;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background: #0369a1;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to EduFlexo</h1>
-        <p>A Smart & Modern School Management System</p>
-        <div class="badge">System is Live & Running Successfully!</div>
+
+    <header>
+        <div class="logo">EduFlexo™</div>
+        <div class="badges">
+            <span class="badge">🌐 Online Cloud</span>
+            <span class="badge">💻 Offline Local Sync</span>
+            <span class="badge">⚡ Hybrid Engine</span>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <h1>Next-Gen School Management Ecosystem</h1>
+        <p class="subtitle">A comprehensive, high-performance architecture engineered to handle multi-campus administration, real-time student tracking, automated fee flows, and seamless offline-first capabilities.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Admin Control Center</h3>
+                <p>Complete authority over academic structures, staff payroll, system-wide analytics, and role permissions.</p>
+                <a href="#" class="btn">Launch Admin Portal</a>
+            </div>
+            <div class="card">
+                <h3>Campus & Teacher Hub</h3>
+                <p>Manage daily attendance, lesson planning, student grading sheets, and direct parent-teacher communications.</p>
+                <a href="#" class="btn">Teacher Gateway</a>
+            </div>
+            <div class="card">
+                <h3>Student & Parent Portal</h3>
+                <p>Track live assignment submissions, tuition fee ledgers, academic schedules, and performance graphs.</p>
+                <a href="#" class="btn">Student Login</a>
+            </div>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2026 EduFlexo Systems. Built for High-Scale Academic Excellence.
+    </footer>
+
 </body>
 </html>
