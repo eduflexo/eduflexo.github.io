@@ -3,165 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduFlexo - Enterprise School Management System</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>EduFlexo - Enterprise School Management Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
         body {
-            background-color: #0f172a;
-            color: #f8fafc;
+            background-color: #f8fafc;
+            color: #1e293b;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
+        /* Top Corporate Header */
         header {
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #1e293b;
-            padding: 20px 50px;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 18px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
         .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #38bdf8;
+            font-size: 26px;
+            font-weight: 800;
+            color: #0f172a;
             letter-spacing: -0.5px;
         }
-        .badges {
+        .logo span {
+            color: #2563eb;
+        }
+        .nav-links {
             display: flex;
-            gap: 10px;
+            gap: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #64748b;
         }
-        .badge {
-            background: #1e293b;
-            color: #38bdf8;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            border: 1px solid #334155;
+        .nav-links span {
+            cursor: pointer;
+            transition: color 0.2s;
         }
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-            flex-grow: 1;
+        .nav-links span:hover {
+            color: #2563eb;
         }
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p.subtitle {
-            font-size: 18px;
-            color: #94a3b8;
-            max-width: 700px;
-            margin: 0 auto 50px auto;
-            line-height: 1.6;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-            text-align: left;
-        }
-        .card {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 30px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-        .card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #f1f5f9;
-        }
-        .card p {
-            color: #94a3b8;
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background: #0284c7;
+        .header-btn {
+            background: #2563eb;
             color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
+            padding: 10px 22px;
+            border-radius: 8px;
             font-weight: 600;
+            text-decoration: none;
             font-size: 14px;
             transition: background 0.2s;
         }
-        .btn:hover {
-            background: #0369a1;
+        .header-btn:hover {
+            background: #1d4ed8;
         }
-        footer {
+
+        /* Hero Section with Corporate Building Background Overlay */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 110px 20px;
             text-align: center;
-            padding: 25px;
-            background: #0f172a;
-            border-top: 1px solid #1e293b;
+        }
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .enterprise-tag {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+            transition: all 0.2s;
+        }
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 16px;
+            backdrop-filter: blur(5px);
+            transition: all 0.2s;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Portals Grid Section */
+        .content-section {
+            max-width: 1200px;
+            margin: -60px auto 60px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 35px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: #eff6ff;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+        .card p {
             color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .card-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px;
             font-size: 14px;
+            border-top: 1px solid #1e293b;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">EduFlexo™</div>
-        <div class="badges">
-            <span class="badge">🌐 Online Cloud</span>
-            <span class="badge">💻 Offline Local Sync</span>
-            <span class="badge">⚡ Hybrid Engine</span>
+        <div class="logo-area">
+            <div class="logo">Edu<span>Flexo</span></div>
         </div>
+        <div class="nav-links">
+            <span>Ecosystem</span>
+            <span>Multi-Campus</span>
+            <span>Hybrid Sync</span>
+            <span>Enterprise Support</span>
+        </div>
+        <a href="#" class="header-btn">Client Portal Login</a>
     </header>
 
-    <div class="main-container">
-        <h1>Next-Gen School Management Ecosystem</h1>
-        <p class="subtitle">A comprehensive, high-performance architecture engineered to handle multi-campus administration, real-time student tracking, automated fee flows, and seamless offline-first capabilities.</p>
+    <section class="hero">
+        <div class="hero-container">
+            <span class="enterprise-tag">Global Enterprise Architecture</span>
+            <h1>Next-Generation Multi-Campus School Management Ecosystem</h1>
+            <p>Engineered for high-scale institutions. Complete online cloud connectivity, robust offline-first local synchronization, and seamless hybrid administration under a single unified dashboard.</p>
+            <div class="hero-actions">
+                <a href="#" class="btn-primary">Explore System Architecture</a>
+                <a href="#" class="btn-secondary">Request Corporate Demo</a>
+            </div>
+        </div>
+    </section>
 
+    <div class="content-section">
         <div class="grid">
             <div class="card">
+                <div class="card-icon">🏢</div>
                 <h3>Admin Control Center</h3>
-                <p>Complete authority over academic structures, staff payroll, system-wide analytics, and role permissions.</p>
-                <a href="#" class="btn">Launch Admin Portal</a>
+                <p>Centralized corporate oversight for multi-campus management, automated payroll processing, advanced financial auditing, and role-based security permissions.</p>
+                <a href="#" class="card-link">Launch Admin Dashboard &rarr;</a>
             </div>
             <div class="card">
+                <div class="card-icon">🎓</div>
                 <h3>Campus & Teacher Hub</h3>
-                <p>Manage daily attendance, lesson planning, student grading sheets, and direct parent-teacher communications.</p>
-                <a href="#" class="btn">Teacher Gateway</a>
+                <p>Advanced digital tools for automated attendance tracking, curriculum lesson planning, real-time grading matrices, and secure faculty-parent communication channels.</p>
+                <a href="#" class="card-link">Access Teacher Gateway &rarr;</a>
             </div>
             <div class="card">
+                <div class="card-icon">📱</div>
                 <h3>Student & Parent Portal</h3>
-                <p>Track live assignment submissions, tuition fee ledgers, academic schedules, and performance graphs.</p>
-                <a href="#" class="btn">Student Login</a>
+                <p>Interactive self-service mobile and web access for live assignment submissions, digital fee ledgers, interactive timetables, and academic performance analytics.</p>
+                <a href="#" class="card-link">Open Student Portal &rarr;</a>
             </div>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 EduFlexo Systems. Built for High-Scale Academic Excellence.
+        &copy; 2026 EduFlexo Enterprise Systems Inc. All Rights Reserved. Built for Global Academic Excellence.
     </footer>
 
 </body>
