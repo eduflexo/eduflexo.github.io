@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduFlexo™ | Global Enterprise School Management System</title>
+    <title>EduFlexo™ | Global Enterprise School Management Ecosystem</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -18,11 +18,11 @@
             overflow-x: hidden;
         }
 
-        /* Top Bar */
+        /* Top Enterprise Status Bar */
         .top-bar {
             background: #090d16;
             color: #94a3b8;
-            padding: 8px 60px;
+            padding: 10px 80px;
             font-size: 13px;
             display: flex;
             justify-content: space-between;
@@ -30,39 +30,76 @@
             border-bottom: 1px solid #1e293b;
         }
         .top-bar-info span {
-            margin-right: 20px;
+            margin-right: 25px;
             color: #cbd5e1;
         }
         .top-bar-info strong {
             color: #38bdf8;
         }
+        .top-bar-contacts {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .top-contact-link {
+            color: #22c55e;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .top-contact-email {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
         /* Header Navigation */
         header {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid #e2e8f0;
-            padding: 16px 60px;
+            padding: 18px 80px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
         }
-        .logo {
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 22px;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        }
+        .logo-text {
             font-size: 28px;
             font-weight: 800;
             color: #0f172a;
             letter-spacing: -0.5px;
         }
-        .logo span {
+        .logo-text span {
             color: #2563eb;
         }
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 30px;
             font-size: 15px;
             font-weight: 600;
             color: #475569;
@@ -79,78 +116,84 @@
             display: flex;
             gap: 12px;
         }
-        .btn-outline {
-            border: 1px solid #cbd5e1;
-            padding: 10px 20px;
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            padding: 11px 20px;
             border-radius: 8px;
-            color: #0f172a;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             font-size: 14px;
-            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+            transition: background 0.2s;
         }
-        .btn-outline:hover {
-            border-color: #2563eb;
-            color: #2563eb;
+        .btn-whatsapp:hover {
+            background: #1eb954;
         }
         .btn-solid {
             background: #2563eb;
             color: white;
-            padding: 10px 22px;
+            padding: 11px 24px;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             font-size: 14px;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
             transition: background 0.2s;
+            cursor: pointer;
+            border: none;
         }
         .btn-solid:hover {
             background: #1d4ed8;
         }
 
-        /* Bright Corporate Hero Section */
+        /* Hero Section */
         .hero {
             position: relative;
-            background: linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(15, 23, 42, 0.75) 100%), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80') no-repeat center center/cover;
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%), 
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=80') no-repeat center center/cover;
             color: white;
-            padding: 140px 20px 120px 20px;
+            padding: 150px 20px 130px 20px;
             text-align: center;
         }
         .hero-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         .hero-tag {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(37, 99, 235, 0.3);
-            border: 1px solid rgba(96, 165, 250, 0.5);
-            color: #60a5fa;
-            padding: 8px 18px;
+            gap: 10px;
+            background: rgba(37, 99, 235, 0.35);
+            border: 1px solid rgba(96, 165, 250, 0.6);
+            color: #93c5fd;
+            padding: 10px 22px;
             border-radius: 30px;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
+            backdrop-filter: blur(8px);
         }
         .hero h1 {
-            font-size: 60px;
+            font-size: 64px;
             font-weight: 800;
             line-height: 1.15;
-            margin-bottom: 24px;
-            letter-spacing: -1.5px;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            margin-bottom: 28px;
+            letter-spacing: -2px;
+            text-shadow: 0 4px 25px rgba(0,0,0,0.6);
         }
         .hero p {
-            font-size: 20px;
+            font-size: 22px;
             color: #f1f5f9;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            max-width: 900px;
+            margin: 0 auto 45px auto;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.6);
         }
         .hero-buttons {
             display: flex;
@@ -160,84 +203,159 @@
         .hero-btn-lg {
             background: #2563eb;
             color: white;
-            padding: 16px 36px;
+            padding: 18px 40px;
             border-radius: 10px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 17px;
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.5);
             transition: transform 0.2s, background 0.2s;
+            cursor: pointer;
+            border: none;
         }
         .hero-btn-lg:hover {
             transform: translateY(-3px);
             background: #1d4ed8;
         }
-        .hero-btn-ghost {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+        .hero-btn-whatsapp {
+            background: #25d366;
             color: white;
-            padding: 16px 36px;
+            padding: 18px 40px;
             border-radius: 10px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 17px;
             text-decoration: none;
-            transition: background 0.2s;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s, background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
         }
-        .hero-btn-ghost:hover {
-            background: rgba(255, 255, 255, 0.25);
+        .hero-btn-whatsapp:hover {
+            transform: translateY(-3px);
+            background: #1eb954;
         }
 
-        /* Stats Counter Section */
+        /* Stats Bar */
         .stats-bar {
             background: #ffffff;
-            max-width: 1100px;
-            margin: -50px auto 70px auto;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            max-width: 1200px;
+            margin: -60px auto 90px auto;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            padding: 30px;
+            padding: 35px;
             text-align: center;
             position: relative;
             z-index: 20;
             border: 1px solid #e2e8f0;
         }
         .stat-item h2 {
-            font-size: 36px;
+            font-size: 40px;
             font-weight: 800;
             color: #2563eb;
         }
         .stat-item p {
             color: #64748b;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 6px;
         }
 
-        /* Enterprise Portals Section */
-        .section-container {
+        /* Leadership Messages Section */
+        .messages-section {
             max-width: 1200px;
-            margin: 0 auto 100px auto;
-            padding: 0 20px;
+            margin: 0 auto 90px auto;
+            padding: 0 30px;
+        }
+        .messages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 35px;
+        }
+        .message-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border-left: 5px solid #2563eb;
+        }
+        .message-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .message-card .role-title {
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .message-card p {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        /* Core Competencies & Features Section */
+        .competencies-section {
+            background: #0f172a;
+            color: white;
+            padding: 100px 30px;
+            margin-bottom: 90px;
         }
         .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
         .section-header h2 {
-            font-size: 38px;
+            font-size: 42px;
             font-weight: 800;
-            color: #0f172a;
-            margin-bottom: 12px;
+            color: white;
+            margin-bottom: 14px;
         }
         .section-header p {
-            color: #64748b;
+            color: #94a3b8;
             font-size: 18px;
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
         }
+        .comp-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .comp-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 35px;
+            border-radius: 14px;
+        }
+        .comp-card h4 {
+            font-size: 20px;
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .comp-card p {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.6;
+        }
 
+        /* Role Portals Section */
+        .portals-container {
+            max-width: 1200px;
+            margin: 0 auto 100px auto;
+            padding: 0 30px;
+        }
         .portals-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -246,53 +364,36 @@
         .portal-card {
             background: white;
             border: 1px solid #e2e8f0;
-            border-radius: 16px;
+            border-radius: 18px;
             padding: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .portal-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #2563eb, #38bdf8);
-            opacity: 0;
-            transition: opacity 0.3s;
+            transition: transform 0.3s;
         }
         .portal-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-color: #cbd5e1;
-        }
-        .portal-card:hover::before {
-            opacity: 1;
         }
         .portal-badge {
             display: inline-block;
             background: #eff6ff;
             color: #2563eb;
             font-weight: 700;
-            font-size: 12px;
-            padding: 6px 12px;
+            font-size: 13px;
+            padding: 6px 14px;
             border-radius: 6px;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         .portal-card h3 {
             font-size: 24px;
             font-weight: 800;
             color: #0f172a;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
         }
         .portal-card p {
             color: #64748b;
             font-size: 15px;
             line-height: 1.6;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
         .portal-btn {
             display: inline-flex;
@@ -305,57 +406,41 @@
             border-radius: 10px;
             font-weight: 700;
             text-decoration: none;
-            transition: background 0.2s;
             cursor: pointer;
+            border: none;
+            font-size: 15px;
         }
         .portal-btn:hover {
             background: #2563eb;
         }
 
-        /* High-Level Features Grid */
-        .features-section {
-            background: #0f172a;
-            color: white;
-            padding: 100px 20px;
-            margin-bottom: 100px;
-        }
-        .features-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-        }
-        .feature-box {
-            background: #1e293b;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
-        .feature-box h4 {
-            font-size: 20px;
-            color: #38bdf8;
-            margin-bottom: 12px;
-        }
-        .feature-box p {
-            color: #94a3b8;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
         /* Footer */
         footer {
             background: #090d16;
-            color: #64748b;
-            padding: 50px 60px;
+            color: #94a3b8;
+            padding: 60px 80px;
             border-top: 1px solid #1e293b;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 20px;
             align-items: center;
+            text-align: center;
+            font-size: 15px;
+        }
+        .footer-executives {
+            display: flex;
+            gap: 30px;
+            background: #1e293b;
+            padding: 15px 30px;
+            border-radius: 10px;
+            border: 1px solid #334155;
             font-size: 14px;
         }
+        .footer-executives strong {
+            color: #38bdf8;
+        }
 
-        /* Modal Overlay for Login */
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -363,8 +448,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(8px);
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(10px);
             z-index: 2000;
             justify-content: center;
             align-items: center;
@@ -372,24 +457,14 @@
         .modal-content {
             background: white;
             padding: 40px;
-            border-radius: 16px;
-            max-width: 420px;
+            border-radius: 18px;
+            max-width: 440px;
             width: 90%;
             text-align: center;
             position: relative;
         }
-        .modal-content h3 {
-            font-size: 24px;
-            margin-bottom: 8px;
-            color: #0f172a;
-        }
-        .modal-content p {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
         .form-group {
-            margin-bottom: 16px;
+            margin-bottom: 18px;
             text-align: left;
         }
         .form-group label {
@@ -405,13 +480,12 @@
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-size: 14px;
-            outline: none;
         }
         .close-modal {
             position: absolute;
             top: 15px;
             right: 20px;
-            font-size: 24px;
+            font-size: 26px;
             cursor: pointer;
             color: #94a3b8;
         }
@@ -419,41 +493,48 @@
 </head>
 <body>
 
-    <!-- Top Bar -->
+    <!-- Top Status Bar -->
     <div class="top-bar">
         <div class="top-bar-info">
-            <span><strong>Status:</strong> All Global Nodes Operational</span>
+            <span><strong>System Status:</strong> All Global Cloud Nodes Active</span>
             <span><strong>Engine:</strong> Enterprise Hybrid Sync v4.2</span>
         </div>
-        <div>
-            <span>Global Support 24/7 | Multi-Campus Enterprise Edition</span>
+        <div class="top-bar-contacts">
+            <a href="mailto:contact@perfecthandsdeveloper.com" class="top-contact-email">✉ contact@perfecthandsdeveloper.com</a>
+            <a href="https://wa.me/?text=Hello%20Perfect%20Hands%20Developer,%20I%20am%20interested%20in%20EduFlexo" target="_blank" class="top-contact-link">💬 WhatsApp Support</a>
         </div>
     </div>
 
     <!-- Header Navigation -->
     <header>
-        <div class="logo">Edu<span>Flexo</span>™</div>
+        <div class="logo-wrapper" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <div class="logo-icon">EF</div>
+            <div class="logo-text">Edu<span>Flexo™</span></div>
+        </div>
         <div class="nav-links">
+            <a href="#messages">Leadership</a>
+            <a href="#competencies">Core Features</a>
             <a href="#portals">Role Portals</a>
-            <a href="#features">Architecture</a>
-            <a href="#global">Multi-Campus</a>
-            <a href="#security">Security & Compliance</a>
         </div>
         <div class="header-actions">
-            <a href="#" onclick="openModal('Client Admin')" class="btn-outline">Client Login</a>
-            <a href="#" onclick="openModal('System Demo')" class="btn-solid">Request Full Demo</a>
+            <a href="https://wa.me/?text=Hello%20Perfect%20Hands%20Developer,%20I%20want%20to%20get%20EduFlexo" target="_blank" class="btn-whatsapp">
+                💬 WhatsApp
+            </a>
+            <button onclick="openModal('Client Portal Login')" class="btn-solid">Client Login</button>
         </div>
     </header>
 
-    <!-- Bright Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <div class="hero-tag">⚡ Multinational Software Platform</div>
+            <div class="hero-tag">⚡ Powered by Perfect Hands Developer</div>
             <h1>Next-Generation Multi-Campus Academic Operating System</h1>
-            <p>Built for large-scale educational institutions. Experience zero-latency offline synchronization, automated financial ledgers, and centralized multi-branch control under a high-level corporate architecture.</p>
+            <p>Designed and engineered under executive leadership for high-scale educational institutions worldwide. Complete zero-latency offline synchronization and centralized control.</p>
             <div class="hero-buttons">
-                <a href="#portals" class="hero-btn-lg">Access System Portals</a>
-                <a href="#features" class="hero-btn-ghost">View Technical Specifications</a>
+                <button onclick="scrollToPortals()" class="hero-btn-lg">Access System Portals</button>
+                <a href="https://wa.me/?text=Hi,%20I%20want%20a%20live%20demo%20of%20EduFlexo" target="_blank" class="hero-btn-whatsapp">
+                    💬 Request WhatsApp Demo
+                </a>
             </div>
         </div>
     </section>
@@ -470,74 +551,111 @@
         </div>
         <div class="stat-item">
             <h2>500+</h2>
-            <p>Campuses Supported</p>
+            <p>Campuses Powered</p>
         </div>
         <div class="stat-item">
             <h2>AES-256</h2>
-            <p>Bank-Grade Encryption</p>
+            <p>Bank-Grade Security</p>
+        </div>
+    </div>
+
+    <!-- Leadership Messages Section -->
+    <div class="messages-section" id="messages">
+        <div class="section-header" style="margin-bottom: 40px;">
+            <h2 style="color: #0f172a;">Executive Messages</h2>
+            <p>Vision and commitment from the leadership of Perfect Hands Developer.</p>
+        </div>
+        <div class="messages-grid">
+            <div class="message-card">
+                <h3>Muhammad Fahad</h3>
+                <div class="role-title">President & Visionary Founder, Perfect Hands Developer</div>
+                <p>"Hamara maqsad educational institutions ko aisi world-class technology dena hai jo multi-campus management ko asan banaye. EduFlexo sirf ek software nahi, balkay academic excellence ka ek complete framework hai jo security aur scalability ko ensure karta hai."</p>
+            </div>
+            <div class="message-card">
+                <h3>Mr. Hamid</h3>
+                <div class="role-title">Chief Executive Officer (CEO), Perfect Hands Developer</div>
+                <p>"Humne EduFlexo ko is tarah design kiya hai ke online cloud connectivity ke sath-saths offline-first hybrid engine bhi behtareen tareeqay se kaam kare. Is platform ke zariye school owners aur administrators apne operations ko zero downtime ke sath chala sakte hain."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Competencies & Advanced Features -->
+    <div class="competencies-section" id="competencies">
+        <div class="section-header">
+            <h2>Core Competencies & Advanced Features</h2>
+            <p>Discover what makes EduFlexo an enterprise-grade multinational software solution.</p>
+        </div>
+        <div class="comp-grid">
+            <div class="comp-card">
+                <h4>🌐 Hybrid Offline-First Sync Engine</h4>
+                <p>Internet connection unstable hone par bhi local database par kaam jari rehta hai. Connection restore hotay hi central cloud par data automatic background sync ho jata hai.</p>
+            </div>
+            <div class="comp-card">
+                <h4>💰 Automated Financial Ledgers & Payroll</h4>
+                <p>Fee voucher generation, online payment gateway tracking, automated staff salary deductions, and multi-branch profit/loss calculation in real time.</p>
+            </div>
+            <div class="comp-card">
+                <h4>🛡️ Granular Security & RBAC</h4>
+                <p>Bank-grade AES-256 encryption aur role-based access control (Super Admin, Principal, Teacher, Student) jo data confidentiality ko mukammal mehfooz rakhta hai.</p>
+            </div>
+            <div class="comp-card">
+                <h4>📊 Multi-Campus Central Oversight</h4>
+                <p>Ek hi dashboard se hazaron branches ki live attendance, student grading matrices, aur academic reporting ko control aur monitor karne ki salahiyat.</p>
+            </div>
         </div>
     </div>
 
     <!-- Role Portals -->
-    <div class="section-container" id="portals">
+    <div class="portals-container" id="portals">
         <div class="section-header">
             <h2>Enterprise Portals & Access Control</h2>
-            <p>Unified access control engineered for admins, branch directors, faculty, and students.</p>
+            <p>Secure login portals for administrative staff, educators, and students.</p>
         </div>
 
         <div class="portals-grid">
             <div class="portal-card">
                 <span class="portal-badge">Executive Level</span>
-                <h3>Super Admin & HQ Dashboard</h3>
-                <p>Global oversight over all campuses, consolidated financial auditing, staff payroll automation, and cross-branch analytics.</p>
-                <div class="portal-btn" onclick="openModal('HQ Super Admin')">Launch Admin Console &rarr;</div>
+                <h3>Super Admin & HQ Control Center</h3>
+                <p>Global oversight over all campuses, financial auditing, payroll processing, and cross-branch analytics.</p>
+                <button class="portal-btn" onclick="openModal('HQ Super Admin Portal')">Launch Admin Console &rarr;</button>
             </div>
 
             <div class="portal-card">
                 <span class="portal-badge">Branch Level</span>
                 <h3>Campus Principal & Faculty Gateway</h3>
-                <p>Manage localized academic calendars, teacher attendance, grading sheets, and direct real-time parent communications.</p>
-                <div class="portal-btn" onclick="openModal('Teacher & Branch Hub')">Open Faculty Hub &rarr;</div>
+                <p>Manage localized academic calendars, teacher attendance, digital grade sheets, and parent messaging.</p>
+                <button class="portal-btn" onclick="openModal('Teacher & Branch Faculty Gateway')">Open Faculty Hub &rarr;</button>
             </div>
 
             <div class="portal-card">
                 <span class="portal-badge">Self Service</span>
-                <h3>Student & Parent Portal</h3>
-                <p>Track academic performance curves, fee voucher ledgers, assignment portals, and automated attendance logs.</p>
-                <div class="portal-btn" onclick="openModal('Student & Parent Portal')">Access Student Portal &rarr;</div>
+                <h3>Student & Parent Interactive Portal</h3>
+                <p>Track performance curves, tuition fee ledgers, assignment portals, and attendance logs live.</p>
+                <button class="portal-btn" onclick="openModal('Student & Parent Portal')">Access Student Portal &rarr;</button>
             </div>
         </div>
     </div>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-        <div class="section-header">
-            <h2 style="color: white;">Designed for High-Scale Operations</h2>
-            <p style="color: #94a3b8;">Why leading educational chains choose EduFlexo Enterprise Architecture.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-box">
-                <h4>Hybrid Offline-First Engine</h4>
-                <p>Work uninterrupted during internet outages. Local servers instantly sync data to the central cloud once connected.</p>
-            </div>
-            <div class="feature-box">
-                <h4>Automated Financial Engine</h4>
-                <p>Generate fee vouchers, track online payments, manage staff payroll, and calculate branch profit/loss automatically.</p>
-            </div>
-            <div class="feature-box">
-                <h4>Granular Security Matrix</h4>
-                <p>Role-based access management ensuring strict data confidentiality across multi-tier administrative staff.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
-        <div>
-            <strong>EduFlexo™ Global Technologies</strong> &copy; 2026. All Rights Reserved.
+        <div style="font-size: 22px; font-weight: 800; color: white;">
+            Edu<span>Flexo™</span> Academic Ecosystem
         </div>
-        <div>
-            <span>Enterprise Grade • Multi-Campus Certified • ISO 27001 Compliant</span>
+
+        <div class="footer-executives">
+            <div>President: <strong>Muhammad Fahad</strong></div>
+            <div>|</div>
+            <div>CEO: <strong>Mr. Hamid</strong></div>
+            <div>|</div>
+            <div>Company: <strong>Perfect Hands Developer</strong></div>
+        </div>
+
+        <div style="font-size: 14px; color: #64748b;">
+            Direct Corporate Contact: <a href="mailto:contact@perfecthandsdeveloper.com" style="color: #38bdf8; text-decoration:none;">contact@perfecthandsdeveloper.com</a>
+        </div>
+
+        <div style="font-size: 13px; color: #475569;">
+            &copy; 2026 EduFlexo Systems Inc. All Rights Reserved. Multi-Campus Certified • ISO 27001 Security Compliant.
         </div>
     </footer>
 
@@ -545,27 +663,35 @@
     <div class="modal" id="loginModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 id="modalTitle">Portal Login</h3>
-            <p>Enter your corporate credentials to proceed.</p>
+            <h3 id="modalTitle" style="margin-bottom:10px; color:#0f172a; font-weight:800;">Portal Authentication</h3>
+            <p style="color:#64748b; font-size:14px; margin-bottom:20px;">Enter institutional credentials to proceed.</p>
             <div class="form-group">
-                <label>User ID / Institutional Email</label>
+                <label>User ID / Corporate Email</label>
                 <input type="text" placeholder="admin@eduflexo.com">
             </div>
             <div class="form-group">
-                <label>Access Password</label>
+                <label>Security Password</label>
                 <input type="password" placeholder="••••••••">
             </div>
-            <button class="portal-btn" style="border:none;" onclick="alert('EduFlexo Enterprise Authentication Engine Initialized!')">Authenticate Access</button>
+            <button class="portal-btn" style="border:none;" onclick="handleAuth()">Authenticate Access</button>
         </div>
     </div>
 
     <script>
         function openModal(title) {
-            document.getElementById('modalTitle').innerText = title + " Authentication";
+            document.getElementById('modalTitle').innerText = title;
             document.getElementById('loginModal').style.display = 'flex';
         }
         function closeModal() {
             document.getElementById('loginModal').style.display = 'none';
+        }
+        function scrollToPortals() {
+            document.getElementById('portals').scrollIntoView({ behavior: 'smooth' });
+        }
+        function handleAuth() {
+            const portal = document.getElementById('modalTitle').innerText;
+            alert(portal + ' Initialized!\n\nAuthenticated under Perfect Hands Developer.\nPresident: Muhammad Fahad | CEO: Mr. Hamid');
+            closeModal();
         }
     </script>
 
