@@ -1,2 +1,2 @@
-# eduflexo.github.io
-EduFlexo - A Smart School Management System
+# Veltora.github.io
+Veltora - A Smart School Management System
