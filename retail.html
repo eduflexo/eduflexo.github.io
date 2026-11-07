@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELTORA - Retail Suite</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
+:root{--blue:#0A6ED1;--navy:#0A1931;--gold:#C9A227;--bg:#F2F5F9;--card:#fff}
+body{background:var(--bg)}
+/* LOGIN */
+#loginPage{height:100vh;display:flex}
+.login-left{flex:1;background:var(--navy);color:#fff;padding:40px;display:flex;flex-direction:column;justify-content:center}
+.login-left h1{font-size:42px;letter-spacing:2px}
+.login-left h1 span{color:var(--blue)}
+.login-left p{opacity:.7;margin-top:10px;line-height:1.6}
+.login-left .tag{margin-top:30px;background:rgba(255,255,255,.08);padding:14px;border-radius:12px;border-left:4px solid var(--gold);font-size:14px}
+.login-right{flex:1;display:flex;align-items:center;justify-content:center;background:#fff;padding:20px}
+.login-box{width:100%;max-width:380px}
+.login-box h2{font-size:28px;margin-bottom:6px}
+.login-box small{color:#777}
+.login-box label{display:block;margin:18px 0 6px;font-weight:600;font-size:13px}
+.login-box input{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;outline:none;font-size:15px}
+.login-box input:focus{border-color:var(--blue)}
+.btn{width:100%;padding:14px;background:var(--blue);color:#fff;border:none;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer;margin-top:22px}
+.btn:hover{background:#085ab0}
+.demo{margin-top:16px;background:#FFF8E1;padding:12px;border-radius:10px;font-size:13px;line-height:1.6}
+.error{color:red;font-size:13px;margin-top:10px;display:none}
+/* DASHBOARD */
+#dashPage{display:none;height:100vh}
+.sidebar{width:250px;background:var(--navy);color:#fff;padding:20px;display:flex;flex-direction:column;position:fixed;left:0;top:0;bottom:0}
+.sidebar .logo{font-size:26px;font-weight:800;letter-spacing:2px}
+.sidebar .logo span{color:var(--blue)}
+.sidebar small{color:#8aa0b8;font-size:11px;letter-spacing:2px}
+.menu{margin-top:30px;display:flex;flex-direction:column;gap:6px}
+.menu a{color:#cbd5e1;text-decoration:none;padding:12px 14px;border-radius:10px;font-size:14px;cursor:pointer}
+.menu a.active,.menu a:hover{background:var(--blue);color:#fff}
+.logout{margin-top:auto;background:#ff4444;color:#fff;border:none;padding:12px;border-radius:10px;cursor:pointer;font-weight:700}
+.main{margin-left:250px;padding:22px}
+.topbar{background:#fff;padding:14px 20px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.topbar input{padding:10px 14px;border:1px solid #eee;border-radius:20px;width:280px;outline:none}
+.topbar b{font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.card{background:#fff;padding:18px;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.card small{color:#888}
+.card h3{font-size:24px;margin-top:8px}
+.card p{font-size:12px;margin-top:4px}
+.green{color:#16a34a}.red{color:#dc2626}.orange{color:#ea580c}
+.grid2{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:16px}
+.box{background:#fff;padding:18px;border-radius:14px}
+.box h4{margin-bottom:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+table th{text-align:left;padding:10px 0;border-bottom:1px solid #eee;color:#888}
+table td{padding:10px 0;border-bottom:1px solid #f5f5f5}
+.badge{background:#dcfce7;color:#16a34a;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700}
+.quick{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.quick button{padding:12px 18px;border:none;border-radius:10px;cursor:pointer;font-weight:700;color:#fff}
+.q1{background:var(--blue)}.q2{background:#16a34a}.q3{background:#f59e0b}.q4{background:#7c3aed}
+@media(max-width:800px){.login-left{display:none}.sidebar{display:none}.main{margin-left:0}.cards{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.topbar input{display:none}}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage">
+  <div class="login-left">
+    <div style="font-size:50px;font-weight:800">V<span style="color:#0A6ED1">ELTORA</span></div>
+    <small style="letter-spacing:3px;color:#C9A227">IN PERFECT HANDS</small>
+    <h1 style="font-size:28px;margin-top:20px;line-height:1.3">Apni Dukaan Ko<br>Digital Banao.</h1>
+    <p>POS, Inventory, Customers, Khata Book, Finance aur HR — sab kuch ek jagah, ek software me.</p>
+    <div class="tag">✅ <b>VELTORA RETAIL SUITE</b><br>Pakistan ke retailers ke liye banaya gaya #1 Software</div>
+  </div>
+  <div class="login-right">
+    <div class="login-box">
+      <h2>Welcome Back 👋</h2>
+      <small>Veltora Retail Suite me login karein</small>
+      <label>Email</label>
+      <input id="email" type="email" placeholder="demo@veltora.com" value="demo@veltora.com">
+      <label>Password</label>
+      <input id="pass" type="password" placeholder="••••••••" value="Veltora123">
+      <div class="error" id="err">Email ya Password ghalat hai!</div>
+      <button class="btn" onclick="login()">Login → Dashboard</button>
+      <div class="demo"><b>Demo Login:</b><br>Email: demo@veltora.com<br>Password: Veltora123</div>
+      <p style="text-align:center;margin-top:14px;font-size:13px;color:#777">Account nahi hai? <b style="color:#0A6ED1">Signup Karein</b></p>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashPage">
+  <div class="sidebar">
+    <div class="logo">V<span>ELTORA</span></div>
+    <small>RETAIL SUITE</small>
+    <div class="menu">
+      <a class="active">🏠 Dashboard</a>
+      <a>🛒 POS - SaleVix</a>
+      <a>📦 Inventory</a>
+      <a>👥 Customers / CRM</a>
+      <a>🚚 Distributors / DMS</a>
+      <a>💰 Finance / ERP</a>
+      <a>👨‍💼 HR & Staff</a>
+      <a>📊 Reports</a>
+      <a>⚙️ Settings</a>
+    </div>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+  <div class="main">
+    <div class="topbar">
+      <div><b>Assalam-o-Alaikum, Fahad 👋</b><br><small style="color:#888">Lahore Branch • Aaj: Saturday</small></div>
+      <input placeholder="🔍 Product, Customer dhoondo...">
+      <b>🔔 &nbsp; 👤 Fahad</b>
+    </div>
+    <div class="quick">
+      <button class="q1" onclick="alert('POS jald aa raha hai!')">+ New Sale</button>
+      <button class="q2">+ Add Product</button>
+      <button class="q3">+ Add Customer</button>
+      <button class="q4">+ Add Expense</button>
+    </div>
+    <div class="cards">
+      <div class="card"><small>AAJ KI SALE</small><h3>Rs. 48,500</h3><p class="green">▲ 12% kal se zyada</p></div>
+      <div class="card"><small>AAJ KA PROFIT</small><h3>Rs. 9,850</h3><p class="green">▲ 8% kal se zyada</p></div>
+      <div class="card"><small>TOTAL CUSTOMERS</small><h3>1,240</h3><p>32 naye is hafte</p></div>
+      <div class="card"><small>LOW STOCK ALERT</small><h3 style="color:#dc2626">7 Items</h3><p class="red">Foran stock mangwayein</p></div>
+    </div>
+    <div class="grid2">
+      <div class="box">
+        <h4>Recent Sales - Aaj Ki Bills</h4>
+        <table>
+          <tr><th>Bill No</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr>
+          <tr><td>#1001</td><td>Ahmed Khan</td><td>5 Items</td><td><b>Rs. 2,450</b></td><td><span class="badge">Paid</span></td></tr>
+          <tr><td>#1002</td><td>Sara Bibi</td><td>3 Items</td><td><b>Rs. 1,150</b></td><td><span class="badge">Paid</span></td></tr>
+          <tr><td>#1003</td><td>Walk-in Customer</td><td>2 Items</td><td><b>Rs. 890</b></td><td><span class="badge">Paid</span></td></tr>
+          <tr><td>#1004</td><td>Usman Ali</td><td>8 Items</td><td><b>Rs. 5,200</b></td><td><span class="badge">Paid</span></td></tr>
+        </table>
+      </div>
+      <div class="box">
+        <h4>Low Stock ⚠️</h4>
+        <p style="font-size:13px;padding:8px 0;border-bottom:1px solid #f5f5f5">🥛 Milk 1L - <b style="color:red">2 bache</b></p>
+        <p style="font-size:13px;padding:8px 0;border-bottom:1px solid #f5f5f5">🍞 Bread - <b style="color:red">4 bache</b></p>
+        <p style="font-size:13px;padding:8px 0;border-bottom:1px solid #f5f5f5">🧴 Shampoo - <b style="color:red">1 bacha</b></p>
+        <p style="font-size:13px;padding:8px 0">🥚 Eggs Dozen - <b style="color:red">0 bache</b></p>
+        <button class="btn" style="margin-top:10px">Order Stock</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function login(){
+  var e=document.getElementById('email').value;
+  var p=document.getElementById('pass').value;
+  if(e==='demo@veltora.com' && p==='Veltora123'){
+    document.getElementById('loginPage').style.display='none';
+    document.getElementById('dashPage').style.display='block';
+  } else {
+    document.getElementById('err').style.display='block';
+  }
+}
+function logout(){
+  document.getElementById('dashPage').style.display='none';
+  document.getElementById('loginPage').style.display='flex';
+}
+</script>
+</body>
+</html>
