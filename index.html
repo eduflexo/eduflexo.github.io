@@ -10,14 +10,12 @@ a{text-decoration:none;color:inherit;cursor:pointer}
 .container{max-width:1200px;margin:auto;padding:0 24px}
 nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e8eaf0;z-index:50}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-/* TOP LOGO - LANDSCAPE SEEDHA FIX */
 .logo{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;line-height:1}
 .logo img{width:44px;height:44px;object-fit:contain;border-radius:8px;background:#f5f6f7;flex-shrink:0}
 .logo i{width:32px;height:32px;background:#0A6ED1;display:inline-block;border-radius:6px;flex-shrink:0}
 .logo-text{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;line-height:1;white-space:nowrap}
 .logo-name{font-size:26px;font-weight:800;letter-spacing:1px;color:#0A1931;line-height:1}
 .logo-tag{font-size:8px;letter-spacing:1.5px;color:#0A6ED1;font-weight:700;margin-top:4px;white-space:nowrap}
-/* NAV LINKS - EK LINE ME SEEDHA */
 .links{display:flex;gap:18px;font-weight:500;font-size:14px;align-items:center;white-space:nowrap}.links a{white-space:nowrap}.links a:hover{color:#0A6ED1}
 .btn{background:#0A6ED1;color:#fff;padding:12px 22px;border-radius:8px;font-weight:600;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;text-align:center;line-height:1;white-space:nowrap;flex-shrink:0}
 .btn-light{background:#f1f3f6;color:#111;padding:12px 22px;border-radius:8px;font-weight:600;border:1px solid #ddd;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;line-height:1;white-space:nowrap}
@@ -29,9 +27,7 @@ nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e8eaf0;z-inde
 .hero-left{padding:60px 40px 60px 0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .hero h1{font-size:50px;line-height:1.05;letter-spacing:-1px}
 .hero p{color:#555;margin:18px 0 0;font-size:17px}
-/* HERO IMAGE - AGAR FILE NA MILE TO BHI KHALI NAHI DIKHEGA */
 .hero-img{width:100%;height:620px;object-fit:cover;border-radius:0;display:block;background:#e8f2ff}
-.hero-img-wrap{background:#e8f2ff;min-height:620px;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .section{padding:56px 0}.grey{background:#F5F6F7}.center{text-align:center}.center h2{font-size:34px}.center p{color:#666;margin-top:8px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px;align-items:center}
@@ -68,7 +64,6 @@ input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radiu
 </head>
 <body>
 <nav><div class="container nav-inner">
-<!-- TOP LOGO FIXED LANDSCAPE -->
 <div class="logo" onclick="showPage('home')"><img id="logoImg" src="" style="display:none" alt="Logo"><i id="logoDefault"></i><div class="logo-text"><span class="logo-name">VELTORA</span><span class="logo-tag">IN PERFECT HANDS • EDUCATION • BUSINESS • TECHNOLOGY</span></div></div>
 <div class="links"><a onclick="showPage('home')">Home</a><a onclick="showPage('retail')">Veltora Retail Suite</a><a onclick="showPage('salevix')">SaleVix</a><a onclick="showPage('erp')">School ERP</a><a onclick="showPage('home');scrollToId('team')">Leadership</a><a onclick="openModal('contact')">Contact</a></div>
 <button class="btn" onclick="openModal('demo')">Book Demo</button>
@@ -81,8 +76,8 @@ input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radiu
 <div class="btn-row"><button class="btn" onclick="scrollToId('products')">Explore Products</button><button class="btn-light" onclick="openModal('contact')">Contact Us</button></div>
 <p style="font-size:13px;color:#777;margin-top:14px">Trusted by <b style="color:#111">IBA Karachi • NUST • LUMS • Beaconhouse</b> • <span id="leadCount" class="badge">0 Leads Saved</span></p>
 <p style="font-size:13px;color:#0A6ED1;font-weight:700;margin-top:8px">President: +92 3250101044 • CEO: +92 3219536312</p></div>
-<!-- HERO BUILDING - NAYI VELTORA GROUP WALI + FALLBACK -->
-<div class="hero-img-wrap"><img class="hero-img" src="images/veltora-building.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=90'" alt="VELTORA GROUP Headquarters"></div>
+<!-- SIRF NAYI BUILDING - PURANI KA LINK HATA DIYA -->
+<img class="hero-img" src="images/veltora-building.jpg" alt="VELTORA GROUP Headquarters">
 </div>
 <div class="container"><div class="slogan-big"><h2>VELTORA - In Perfect Hands</h2><p>President M. Fahad builds the technology • CEO M. Hamid builds the trust • Your business is in perfect hands.</p></div></div>
 <div class="section" id="about"><div class="container"><div class="about-box">
@@ -90,23 +85,23 @@ input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radiu
 <h2 style="font-size:32px;margin-top:12px">Building Pakistan's Most Trusted Education & Business Technology Company</h2>
 <div class="grid2">
 <div><p><b>VELTORA</b> is a technology company <b>Headquartered in Singapore since 2025</b>, with operations in Pakistan, on a mission to modernize how schools are managed and how businesses grow. Founded in 2018, we started with one simple belief — <b>great technology should be simple, secure, and accessible for everyone.</b></p></div>
-<div><img class="building-img" src="images/veltora-reception.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=80'" alt="VELTORA GROUP Reception"><p style="font-size:12px;color:#888;text-align:center">VELTORA GROUP Head Office - Reception & Workspace</p></div>
+<div><img class="building-img" src="images/veltora-reception.jpg" alt="VELTORA GROUP Reception"><p style="font-size:12px;color:#888;text-align:center">VELTORA GROUP Head Office - Reception & Workspace</p></div>
 </div>
 <div class="grid2">
-<div><img class="building-img" src="images/veltora-meeting.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1000&q=80'" alt="VELTORA GROUP Meeting Room"><p style="font-size:12px;color:#888;text-align:center">VELTORA GROUP Meeting Room - Strategy & Planning</p></div>
+<div><img class="building-img" src="images/veltora-meeting.jpg" alt="VELTORA GROUP Meeting Room"><p style="font-size:12px;color:#888;text-align:center">VELTORA GROUP Meeting Room - Strategy & Planning</p></div>
 <div><p>Today, VELTORA powers <b>100+ schools, retailers, and enterprises</b> across Karachi, Lahore, and Multan with three flagship platforms: <b>Veltora Retail Suite</b> for complete business management, <b>SaleVix POS</b> for fast retail operations, and <b>Veltora School ERP</b> for complete school management. From admissions to attendance, from sales to finance — everything works in one secure cloud system.</p></div>
 </div>
 <div class="grid2">
 <div><p>What makes us different is our approach: <b>local support, global standards.</b> Our team understands Pakistani schools and businesses, speaks your language, and provides on-ground training, implementation, and 24/7 support — so you never feel alone with technology.</p>
 <ul class="check"><li><b>HQ 2025:</b> Headquartered in Singapore since 2025</li><li><b>Since 2018:</b> 8+ years of proven delivery</li><li><b>100+ Clients:</b> Schools, retailers & enterprises trust us</li><li><b>99.9% Uptime:</b> Secure cloud infrastructure</li><li><b>Local Team:</b> Karachi • Lahore • Multan</li></ul></div>
-<div><img class="building-img" src="images/veltora-team.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1000&q=80'" alt="VELTORA GROUP Team"><p style="font-size:12px;color:#888;text-align:center">VELTORA GROUP Team - Working Together For You</p></div>
+<div><img class="building-img" src="images/veltora-team.jpg" alt="VELTORA GROUP Team"><p style="font-size:12px;color:#888;text-align:center">VELTORA GROUP Team - Working Together For You</p></div>
 </div>
 <br><div class="btn-row"><button class="btn" onclick="openModal('demo')">Partner With Veltora →</button></div>
 </div></div></div>
 <div class="section grey"><div class="container center"><span class="pill">OUR FOUNDATION</span><h2 style="margin-top:10px">Vision, Mission & Core Competencies</h2>
-<div class="grid2" style="text-align:left;margin-top:30px"><div><h3>👁️ Our Vision</h3><p style="color:#444"><b>To become Pakistan's most trusted technology partner</b> — where every school runs smartly and every business grows digitally. We envision a future where no school struggles with paperwork, no shop loses sales due to slow systems, and every organization has access to world-class, affordable technology.</p><p style="color:#0A6ED1;font-weight:700;font-size:13px">VISION 2030: 1000+ Institutions • Pan-Pakistan • Global Standards</p></div><div><img class="building-img" src="images/veltora-reception.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1000&q=80'"></div></div>
-<div class="grid2" style="text-align:left"><div><img class="building-img" src="images/veltora-meeting.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?w=1000&q=80'"></div><div><h3>🎯 Our Mission</h3><p style="color:#444"><b>To simplify operations through secure, scalable, and easy-to-use technology.</b> We build products that save time, reduce cost, and give leaders clear data to make better decisions. From a small school in Multan to a large retail chain in Karachi — same quality, same care.</p><p style="color:#0A6ED1;font-weight:700;font-size:13px">OUR PROMISE: Simple • Secure • Supported • In Perfect Hands</p></div></div>
-<div class="grid2" style="text-align:left"><div><h3>💎 Core Competencies</h3><ul style="margin-left:16px;color:#333"><li><b>Education Technology:</b> Complete School ERP</li><li><b>Business Software:</b> Veltora Retail Suite - CRM, Finance, HR</li><li><b>Retail Technology:</b> SaleVix POS - Fast & Reliable</li><li><b>Cloud & Security:</b> Enterprise-grade protection</li><li><b>Local Support:</b> Training + 24/7 Help</li></ul></div><div><img class="building-img" src="images/veltora-team.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=80'"></div></div>
+<div class="grid2" style="text-align:left;margin-top:30px"><div><h3>👁️ Our Vision</h3><p style="color:#444"><b>To become Pakistan's most trusted technology partner</b> — where every school runs smartly and every business grows digitally. We envision a future where no school struggles with paperwork, no shop loses sales due to slow systems, and every organization has access to world-class, affordable technology.</p><p style="color:#0A6ED1;font-weight:700;font-size:13px">VISION 2030: 1000+ Institutions • Pan-Pakistan • Global Standards</p></div><div><img class="building-img" src="images/veltora-reception.jpg" alt="VELTORA GROUP Vision"></div></div>
+<div class="grid2" style="text-align:left"><div><img class="building-img" src="images/veltora-meeting.jpg" alt="VELTORA GROUP Mission"></div><div><h3>🎯 Our Mission</h3><p style="color:#444"><b>To simplify operations through secure, scalable, and easy-to-use technology.</b> We build products that save time, reduce cost, and give leaders clear data to make better decisions. From a small school in Multan to a large retail chain in Karachi — same quality, same care.</p><p style="color:#0A6ED1;font-weight:700;font-size:13px">OUR PROMISE: Simple • Secure • Supported • In Perfect Hands</p></div></div>
+<div class="grid2" style="text-align:left"><div><h3>💎 Core Competencies</h3><ul style="margin-left:16px;color:#333"><li><b>Education Technology:</b> Complete School ERP</li><li><b>Business Software:</b> Veltora Retail Suite - CRM, Finance, HR</li><li><b>Retail Technology:</b> SaleVix POS - Fast & Reliable</li><li><b>Cloud & Security:</b> Enterprise-grade protection</li><li><b>Local Support:</b> Training + 24/7 Help</li></ul></div><div><img class="building-img" src="images/veltora-team.jpg" alt="VELTORA GROUP Core"></div></div>
 </div></div>
 <div class="section" id="team"><div class="container center"><span class="pill">OUR LEADERSHIP • IN PERFECT HANDS</span><h2 style="margin-top:10px">Meet The Leaders Behind VELTORA</h2><p>Perfect Hands. Clear Vision. Strong Leadership.</p>
 <div class="grid2" style="text-align:left;margin-top:30px">
@@ -117,26 +112,26 @@ input,select,textarea{width:100%;padding:12px;border:1px solid #ddd;border-radiu
 </div></div>
 <div class="section grey" id="products"><div class="container center"><h2>Products</h2><p>Modular solutions built for real-world operations - In Perfect Hands.</p>
 <div class="grid3">
-<div class="card"><img src="images/veltora-meeting.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'"><div class="card-body"><h3>Veltora Retail Suite</h3><p>All-in-one business analytics & operations.</p><a class="learn" onclick="showPage('retail')">Learn more →</a><br><div class="btn-row" style="margin-top:auto"><button class="btn btn-small" onclick="openModal('demo','Veltora Retail Suite')">Get Retail Suite Demo</button></div></div></div>
-<div class="card"><img src="images/veltora-team.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80'"><div class="card-body"><h3>SaleVix POS</h3><p>Modern POS for retail. Fast checkout, inventory.</p><a class="learn" onclick="showPage('salevix')">Learn more →</a><br><div class="btn-row" style="margin-top:auto"><button class="btn btn-small" onclick="openModal('demo','SaleVix POS')">Get SaleVix Demo</button></div></div></div>
-<div class="card"><img src="images/veltora-reception.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80'"><div class="card-body"><h3>Veltora School ERP</h3><p>School management for admins & teachers.</p><a class="learn" onclick="showPage('erp')">Learn more →</a><br><div class="btn-row" style="margin-top:auto"><button class="btn btn-small" onclick="openModal('demo','Veltora School ERP')">Get ERP Demo</button></div></div></div>
+<div class="card"><img src="images/veltora-meeting.jpg"><div class="card-body"><h3>Veltora Retail Suite</h3><p>All-in-one business analytics & operations.</p><a class="learn" onclick="showPage('retail')">Learn more →</a><br><div class="btn-row" style="margin-top:auto"><button class="btn btn-small" onclick="openModal('demo','Veltora Retail Suite')">Get Retail Suite Demo</button></div></div></div>
+<div class="card"><img src="images/veltora-team.jpg"><div class="card-body"><h3>SaleVix POS</h3><p>Modern POS for retail. Fast checkout, inventory.</p><a class="learn" onclick="showPage('salevix')">Learn more →</a><br><div class="btn-row" style="margin-top:auto"><button class="btn btn-small" onclick="openModal('demo','SaleVix POS')">Get SaleVix Demo</button></div></div></div>
+<div class="card"><img src="images/veltora-reception.jpg"><div class="card-body"><h3>Veltora School ERP</h3><p>School management for admins & teachers.</p><a class="learn" onclick="showPage('erp')">Learn more →</a><br><div class="btn-row" style="margin-top:auto"><button class="btn btn-small" onclick="openModal('demo','Veltora School ERP')">Get ERP Demo</button></div></div></div>
 </div></div></div>
 </div>
 <div id="page-retail" class="page"><div class="container" style="padding:56px 24px">
 <span class="pill">VELTORA RETAIL SUITE • BY VELTORA • IN PERFECT HANDS</span><h1 style="font-size:42px;margin:14px 0">One platform for your entire business.</h1>
-<div class="grid2"><div><p style="color:#555;font-size:17px">Unify CRM, Finance, HR, Inventory, and Analytics in one secure cloud platform. Built for growing businesses to streamline operations, make data-driven decisions, and scale with confidence.</p></div><div><img class="building-img" src="images/veltora-meeting.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1000&q=80'"></div></div>
+<div class="grid2"><div><p style="color:#555;font-size:17px">Unify CRM, Finance, HR, Inventory, and Analytics in one secure cloud platform. Built for growing businesses to streamline operations, make data-driven decisions, and scale with confidence.</p></div><div><img class="building-img" src="images/veltora-meeting.jpg"></div></div>
 <div class="grid3"><div class="card"><div class="card-body"><h3>📊 CRM & Sales</h3><p>Manage leads, customers, deals, pipeline & performance.</p></div></div><div class="card"><div class="card-body"><h3>💰 Finance</h3><p>Invoices, expenses, profit reports with full accuracy.</p></div></div><div class="card"><div class="card-body"><h3>👥 HR & Payroll</h3><p>Attendance, payroll, leave, employee management.</p></div></div></div>
 <div style="background:#F5F6F7;border-radius:14px;padding:28px;margin-top:24px"><h3>Pricing - Veltora Retail Suite</h3><p style="color:#666">Starter $29/mo • Growth $99/mo • Enterprise Custom</p><p style="color:#111;font-weight:700;margin-top:8px">Contact: President +92 3250101044 • CEO +92 3219536312</p><br><div class="btn-row"><button class="btn" onclick="openModal('demo','Veltora Retail Suite')">Start Free Trial</button> <button class="btn-light" onclick="showPage('home')">← Back</button></div></div>
 </div></div>
 <div id="page-salevix" class="page"><div class="container" style="padding:56px 24px">
 <span class="pill">SALEVIX POS • BY VELTORA • IN PERFECT HANDS</span><h1 style="font-size:42px;margin:14px 0">Sell faster. Manage smarter.</h1>
-<div class="grid2"><div><p style="color:#555;font-size:17px">SaleVix POS is Pakistan's fastest retail checkout system — for shops, supermarkets, pharmacies, and restaurants. Barcode, inventory auto-update, real-time reports.</p></div><div><img class="building-img" src="images/veltora-team.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1000&q=80'"></div></div>
+<div class="grid2"><div><p style="color:#555;font-size:17px">SaleVix POS is Pakistan's fastest retail checkout system — for shops, supermarkets, pharmacies, and restaurants. Barcode, inventory auto-update, real-time reports.</p></div><div><img class="building-img" src="images/veltora-team.jpg"></div></div>
 <div class="grid3"><div class="card"><div class="card-body"><h3>⚡ Fast Checkout</h3><p>2-second billing, barcode, cash / card / QR / JazzCash.</p></div></div><div class="card"><div class="card-body"><h3>📦 Smart Inventory</h3><p>Stock auto-decreases, low-stock alerts, expiry tracking.</p></div></div><div class="card"><div class="card-body"><h3>📈 Live Reports</h3><p>Daily sales, best products, staff performance — on mobile.</p></div></div></div>
 <div style="background:#F5F6F7;border-radius:14px;padding:28px;margin-top:24px"><h3>Pricing - SaleVix POS</h3><p style="color:#666">Single Store Rs. 2,500/mo • Multi-Store Rs. 4,999/mo • Enterprise Custom</p><p style="color:#111;font-weight:700;margin-top:8px">Contact: President +92 3250101044 • CEO +92 3219536312</p><br><div class="btn-row"><button class="btn" onclick="openModal('demo','SaleVix POS')">Get SaleVix Demo</button> <button class="btn-light" onclick="showPage('home')">← Back</button></div></div>
 </div></div>
 <div id="page-erp" class="page"><div class="container" style="padding:56px 24px">
 <span class="pill">VELTORA SCHOOL ERP • BY VELTORA • IN PERFECT HANDS</span><h1 style="font-size:42px;margin:14px 0">Poora school, ek hi system me.</h1>
-<div class="grid2"><div><p style="color:#555;font-size:17px">Admissions se leke Fees, Attendance, Exams, Timetable aur Parent Communication tak. Principal ko clear reports, teachers ko easy tools, parents ko full transparency.</p></div><div><img class="building-img" src="images/veltora-reception.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1000&q=80'"></div></div>
+<div class="grid2"><div><p style="color:#555;font-size:17px">Admissions se leke Fees, Attendance, Exams, Timetable aur Parent Communication tak. Principal ko clear reports, teachers ko easy tools, parents ko full transparency.</p></div><div><img class="building-img" src="images/veltora-reception.jpg"></div></div>
 <div class="grid3"><div class="card"><div class="card-body"><h3>🎓 Admissions</h3><p>Online admission, student profile, documents, promotion.</p></div></div><div class="card"><div class="card-body"><h3>💳 Fees</h3><p>Auto challan, discount, fine, SMS / WhatsApp reminders.</p></div></div><div class="card"><div class="card-body"><h3>📚 Exams</h3><p>Attendance, timetable, homework, exams, auto result card.</p></div></div></div>
 <div style="background:#F5F6F7;border-radius:14px;padding:28px;margin-top:24px"><h3>Pricing - School ERP</h3><p style="color:#666">Small School Rs. 4,999/mo • Medium Rs. 9,999/mo • Large - Custom • First Month Free</p><p style="color:#111;font-weight:700;margin-top:8px">Contact: President +92 3250101044 • CEO +92 3219536312</p><br><div class="btn-row"><button class="btn" onclick="openModal('demo','Veltora School ERP')">Get School ERP Demo - Free</button> <button class="btn-light" onclick="showPage('home')">← Back</button></div></div>
 </div></div>
